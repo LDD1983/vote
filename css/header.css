@@ -1,0 +1,17 @@
+header{
+    display: flex;
+    justify-content: center;
+    background-color: #ccc;
+    height: 40px;
+    padding-top: 9px;
+}
+header>a{
+    color: whitesmoke;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+}
+header>a:hover{
+    font-weight: 300;
+  }

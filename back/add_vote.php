@@ -11,14 +11,23 @@
         form>div{
             margin-bottom: 10px;
         }
-        .timeset{
-            display: flex;}
+        /* label{
+            width: 500px;
+        } */
+        /* .timeset{
+            display: flex;} */
         .time{
-            margin-right: 20px;
+            margin-bottom: 10px;
         }   
-        #subject{
-            width: 300px;
+        .subj,.type,#option{
+            text-align: center;
         }
+        #subject,
+        #open_date,
+        #close_date{
+            width: 200px;
+        }
+       
         .subm{
             text-align: center;
             margin-top: 30px;
@@ -37,11 +46,11 @@
         </div>
     <div class="timeset">
         <div class="time open">
-            <label for="open_time">開始時間&nbsp;&nbsp;</label>
+            <label for="open_time">開始時間：</label>
             <input type="datetime-local" name="open_date" id="open_date">
         </div>
         <div class="time close">
-            <label for="close_time">結束時間&nbsp;&nbsp;</label>
+            <label for="close_time">結束時間：</label>
             <input type="datetime-local" name="close_date" id="close_date">
         </div>
 
@@ -53,30 +62,22 @@
             <input type="radio" name="type" id="type2" value="2">複選
         </div>
         <hr>
-        <div class="option" id="option">
+        <div id="option" >
+        <div class="option" >
         <div class="des">
             <label for="description">項目：</label>
-            <input type="text" name="description[]" id="description">
+            <input type="text" name="description[]" >
+            <button type="button" onclick="plusO()">+</button>
+         </div>
 
         </div>
-        <div class="des">
-            <label for="description">項目：</label>
-            <input type="text" name="description[]" id="description">
-
         </div>
-        <div class="des">
-            <label for="description">項目：</label>
-            <input type="text" name="description[]" id="description">
+        
 
-        </div>
-        <div class="des">
-            <label for="description">項目：</label>
-            <input type="text" name="description[]" id="description">
-
-        </div>
         </div>
         <div class="subm">
             <input type="submit" value="新增主題" onclick="confirm('確定新增?')">
+            <input type="reset" value="重設">
         </div>
     </form>
     
@@ -85,8 +86,16 @@
 
 
     <script>
+      
+        function plusO() {
+           option.innerHTML = option.innerHTML + optionC[0].innerHTML ;
+            }
         let option = document.getElementById('option')
+        let optionC = document.getElementsByClassName('option')
+
         console.log(option);
+        console.log(optionC[0]);
+
     </script>
 </body>
 </html>

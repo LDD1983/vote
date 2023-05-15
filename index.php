@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>神奇投票所</title>
-    <link rel="stylesheet" href="./css/index_style.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/basic.css">
 </head>
 <body>
     <header>
@@ -13,7 +14,7 @@
         <a href="./front/res.php">結果</a>
         <a href="./front/login.php">登入</a>
         <a href="./front/reg.php">註冊</a>
-        <a href="./backend.php">後台</a>
+        <a href="./backend.php">管理</a>
 
 
     </header>

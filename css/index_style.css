@@ -1,9 +1,0 @@
-header{
-    display: flex;
-    justify-content: center;
-    background-color: #ccc;
-}
-header>a{
-    color: red;
-    margin-left: 10px;
-}
