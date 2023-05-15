@@ -13,9 +13,31 @@
         <a href="./front/res.php">結果</a>
         <a href="./front/login.php">登入</a>
         <a href="./front/reg.php">註冊</a>
+        <a href="./backend.php">後台</a>
+
 
     </header>
     <main>
+        <ul>
+        <?php
+     include_once "db.php";
+
+
+$sql="select * from `topic`";
+$rows=$pdo->query($sql)->fetchAll();
+foreach ($rows as $row) {
+    ?>
+    <li>
+       <?=$row['subject'];?>
+    </li>
+    <?php
+    # code...
+}
+?>
+</ul>
+
+
+          
 
     </main>
     <footer>
