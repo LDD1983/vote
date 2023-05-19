@@ -1,0 +1,138 @@
+<?php include_once "../db.php";
+$topic = $pdo->query("select * from `topic` where `id`='{$_GET['id']}'")
+    ->fetch(PDO::FETCH_ASSOC);
+
+$options = $pdo->query("select * from `options` where `subject_id`='{$_GET['id']}'")
+    ->fetchAll(PDO::FETCH_ASSOC);
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit_vote</title>
+    <link rel="stylesheet" href="../css/center.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <script src="../Js/jquery-3.7.0.min.js"></script>
+
+
+    <style>
+
+        form>div{
+            margin-bottom: 10px;
+        }
+        .options>div{
+            margin-bottom: 5px;
+        }
+        /* label{
+            width: 500px;
+        } */
+        /* .timeset{
+            display: flex;} */
+        .time{
+            margin-bottom: 10px;
+        }
+        .subj,.type,#option{
+            text-align: center;
+        }
+        #subject,
+        #open_date,
+        #close_date{
+            width: 250px;
+        }
+
+        .subm{
+            text-align: center;
+            margin-top: 30px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <a href="../index.php">首頁</a>
+    <a href="logout.php">登出</a>
+   </header>
+   <main>
+   
+    <form action="../api/edit_vote_api.php" method="post">
+    <h1>編輯主題</h1>
+        <div class="subj">
+            <label for="subject">主題說明：</label>
+            <input type="text"
+                    name="subject"
+                    id="subject"
+                    value="<?=$topic['subject'];?>">
+
+
+        </div>
+    <div class="timeset">
+        <div class="time open">
+            <label for="open_time">開始時間：</label>
+            <input type="datetime-local" name="open_date" id="open_date" value="<?=$topic['open_date'];?>">
+        </div>
+        <div class="time close">
+            <label for="close_time">結束時間：</label>
+            <input type="datetime-local" name="close_date" id="close_date" value="<?=$topic['close_date'];?>">
+        </div>
+
+     </div>
+
+        <div class="type">
+            <label for="type">類型：</label>
+            <input type="radio" name="type" id="type1" value="1" <?=($topic['type'] == 1) ? 'checked' : '';?>>單選&nbsp;
+            <input type="radio" name="type" id="type2" value="2" <?=($topic['type'] == 2) ? 'checked' : '';?>>複選
+        </div>
+        <hr>
+        <div class="options">
+        <?php
+foreach ($options as $opt) {
+    ?>
+        <div>
+            <label for="description">項目：</label>
+            <input type="text" name="description[]"  class="description-input" value="<?=$opt['description'];?>">
+            <span onclick="addOption()" width="50px">+</span>
+            <span onclick="removeOption(this)" width="50px">-</span>
+            <input type="hidden" name="opt_id[]" value="<?=$opt['id'];?>" >
+        </div>
+
+         <?php
+}
+?>
+        </div>
+
+        <div class="subm">
+            <input type="hidden" name="subject_id" value="<?=$topic['id'];?>">
+            <input type="submit" value="編輯主題">
+            <input type="reset" value="重設">
+            </div>
+        </form>
+    </main>
+
+
+
+
+
+
+</body>
+</html>
+
+<script>
+        function addOption(){
+        let opt=`<div>
+                    <label for="description">項目：</label>
+                    <input type="text" name="description[]"  class="description-input">
+                    <span onclick="addOption()">+</span>
+                    <span onclick="removeOption(this)">-</span>
+                </div>`
+                $(".options").append(opt);
+        }
+        function removeOption(el){
+            let dom=$(el).parent()
+            $(dom).remove();
+        }
+    </script>

@@ -5,9 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add_vote</title>
+    <link rel="stylesheet" href="../css/basic.css">
     <link rel="stylesheet" href="../css/center.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/reset.css">
+   
+    
+
     <style>
-       
+
         form>div{
             margin-bottom: 10px;
         }
@@ -18,7 +24,7 @@
             display: flex;} */
         .time{
             margin-bottom: 10px;
-        }   
+        }
         .subj,.type,#option{
             text-align: center;
         }
@@ -27,7 +33,7 @@
         #close_date{
             width: 200px;
         }
-       
+
         .subm{
             text-align: center;
             margin-top: 30px;
@@ -36,13 +42,24 @@
     </style>
 </head>
 <body>
-    
+    <header>
+    <a href="../index.php">首頁</a>
+    <a href="logout.php">登出</a>
+   </header>
+   <nav>
+        <a href="./back/add_vote.php">新增投票</a>
+        <a href="./back/que_vote.php">結果查詢</a>
+   </nav>
+
+   <main>
+   
     <form action="../api/add_vote_api.php" method="post">
+    <h1>新增主題</h1>
         <div class="subj">
             <label for="subject">主題說明：</label>
             <input type="text" name="subject" id="subject">
-            
-            
+
+
         </div>
     <div class="timeset">
         <div class="time open">
@@ -55,47 +72,49 @@
         </div>
 
      </div>
-        
+
         <div class="type">
             <label for="type">類型：</label>
             <input type="radio" name="type" id="type1" value="1">單選&nbsp;
             <input type="radio" name="type" id="type2" value="2">複選
         </div>
         <hr>
-        <div id="option" >
-        <div class="option" >
-        <div class="des">
+        <div class="options">
+        <div>
             <label for="description">項目：</label>
-            <input type="text" name="description[]" >
-            <button type="button" onclick="plusO()">+</button>
-         </div>
-
+            <input type="text" name="description[]" class="description-input">
+            <span onclick="addOption()">+</span>
+            <span onclick="removeOption(this)">-</span>
         </div>
-        </div>
-        
-
         </div>
         <div class="subm">
             <input type="submit" value="新增主題" onclick="confirm('確定新增?')">
             <input type="reset" value="重設">
         </div>
     </form>
-    
+    </main>
 
 
 
 
-    <script>
-      
-        function plusO() {
-           option.innerHTML = option.innerHTML + optionC[0].innerHTML ;
-            }
-        let option = document.getElementById('option')
-        let optionC = document.getElementsByClassName('option')
 
-        console.log(option);
-        console.log(optionC[0]);
 
-    </script>
 </body>
 </html>
+<script src="../Js/jquery-3.7.0.min.js"></script>
+
+<script>
+        function addOption(){
+        let opt=`<div>
+                    <label for="description">項目：</label>
+                    <input type="text" name="description[]"  class="description-input">
+                    <span onclick="addOption()">+</span>
+                    <span onclick="removeOption(this)">-</span>
+                </div>`
+                $(".options").append(opt);
+        }
+        function removeOption(el){
+            let dom=$(el).parent()
+            $(dom).remove();
+        }
+    </script>

@@ -1,6 +1,11 @@
-body{
+main{
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     height: 100vh;
+    text-align: center;
+}
+form{
+    text-align: center;
+
 }

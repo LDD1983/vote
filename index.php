@@ -1,12 +1,14 @@
+<?php include_once "./db.php";?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>神奇投票所</title>
+    <title>黑箱作業</title>
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="./css/reset.css">
 </head>
 <body>
     <header>
@@ -19,31 +21,26 @@
 
     </header>
     <main>
-        <ul>
-        <?php
-     include_once "db.php";
-
-
-$sql="select * from `topic`";
-$rows=$pdo->query($sql)->fetchAll();
-foreach ($rows as $row) {
-    ?>
-    <li>
-       <?=$row['subject'];?>
-    </li>
     <?php
-    # code...
-}
-?>
-</ul>
+
+    $do = $_GET['do'] ?? 'list';
+
+    $file = "./front/" . $do . ".php";
+
+    if (file_exists($file)) {
+    include $file;
+    } else {
+    include "./front/list.php";
+    }
+    ?>
 
 
-          
+
 
     </main>
     <footer>
 
     </footer>
-    
+
 </body>
 </html>

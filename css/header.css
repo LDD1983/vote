@@ -1,17 +1,30 @@
 header{
     display: flex;
     justify-content: center;
-    background-color: #ccc;
+    background-color: lightpink;
+    /* opacity: 0.5; */
     height: 40px;
     padding-top: 9px;
+    /* position: fixed; */
+    /* top: 0; */
 }
-header>a{
+nav{
+    display: flex;
+    justify-content:flex-start;
+    /* background-color: lightgrey; */
+    color: black;
+    /* height: 20px;    */
+
+}
+header>a,
+nav>a{
     color: whitesmoke;
     margin-left: 20px;
     text-decoration: none;
     font-weight: 500;
     font-size: 18px;
 }
-header>a:hover{
+header>a:hover,
+nav>a:hover{
     font-weight: 300;
   }
