@@ -1,6 +1,7 @@
-<?php include_once "./db.php";?>
+<?php include_once "./db.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,13 +12,13 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/center.css">
     <style>
-        ul{
+        ul {
             width: 80%;
             list-style: none;
         }
-        
     </style>
 </head>
+
 <body>
     <header>
         <a href="index.php">首頁</a>
@@ -29,18 +30,18 @@
 
     </header>
     <main>
-    <?php
+        <?php
 
-    $do = $_GET['do'] ?? 'list';
+        $do = $_GET['do'] ?? 'list';
 
-    $file = "./front/" . $do . ".php";
+        $file = "./front/" . $do . ".php";
 
-    if (file_exists($file)) {
-    include $file;
-    } else {
-    include "./front/list.php";
-    }
-    ?>
+        if (file_exists($file)) {
+            include $file;
+        } else {
+            include "./front/list.php";
+        }
+        ?>
 
 
 
@@ -51,4 +52,5 @@
     </footer>
 
 </body>
+
 </html>

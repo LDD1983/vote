@@ -16,6 +16,3 @@ $pdo->exec("delete from `options` where `subject_id`='{$_GET['id']}'");
 
 
 header("location:../backend.php");
-
-?>
-

@@ -1,11 +1,12 @@
-main{
+main {
     display: flex;
     justify-content: center;
     /* align-items: center; */
     height: 100vh;
     text-align: center;
 }
-form{
+
+form {
     text-align: center;
 
 }

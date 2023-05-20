@@ -60,7 +60,5 @@ echo '$options';
 print_r($options);
 echo "</pre>";
 
-header("location:../backend.php")
-
-?>
+header("location:../backend.php");
 
