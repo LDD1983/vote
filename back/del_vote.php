@@ -47,7 +47,6 @@
             ?>
                 <li>
                     <?= $row2d['description']; ?>
-
                 </li>
             <?php
             }

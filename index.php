@@ -11,10 +11,12 @@
     <link rel="stylesheet" href="./css/basic.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/center.css">
+   
     <style>
         ul {
             width: 80%;
             list-style: none;
+            margin: 0;
         }
     </style>
 </head>

@@ -19,45 +19,11 @@ $options = $pdo->query("select * from `options` where `subject_id`='{$_GET['id']
     <link rel="stylesheet" href="../css/center.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/form.css">
     <script src="../Js/jquery-3.7.0.min.js"></script>
 
 
-    <style>
-        form>div {
-            margin-bottom: 10px;
-        }
-
-        .options>div {
-            margin-bottom: 5px;
-        }
-
-        /* label{
-            width: 500px;
-        } */
-        /* .timeset{
-            display: flex;} */
-        .time {
-            margin-bottom: 10px;
-        }
-
-        .subj,
-        .type,
-        #option {
-            text-align: center;
-        }
-
-        #subject,
-        #open_date,
-        #close_date {
-            width: 250px;
-        }
-
-        .subm {
-            text-align: center;
-            margin-top: 30px;
-            border-radius: 10px;
-        }
-    </style>
+   
 </head>
 
 <body>
@@ -70,14 +36,11 @@ $options = $pdo->query("select * from `options` where `subject_id`='{$_GET['id']
         <a href="./back/que_vote.php">結果查詢</a>
     </nav>
     <main>
-
         <form action="../api/edit_vote_api.php" method="post">
             <h1>編輯主題</h1>
             <div class="subj">
                 <label for="subject">主題說明：</label>
                 <input type="text" name="subject" id="subject" value="<?= $topic['subject']; ?>">
-
-
             </div>
             <div class="timeset">
                 <div class="time open">
@@ -90,7 +53,6 @@ $options = $pdo->query("select * from `options` where `subject_id`='{$_GET['id']
                 </div>
 
             </div>
-
             <div class="type">
                 <label for="type">類型：</label>
                 <input type="radio" name="type" id="type1" value="1" <?= ($topic['type'] == 1) ? 'checked' : ''; ?>>單選&nbsp;
@@ -108,15 +70,14 @@ $options = $pdo->query("select * from `options` where `subject_id`='{$_GET['id']
                         <span onclick="removeOption(this)" width="50px">-</span>
                         <input type="hidden" name="opt_id[]" value="<?= $opt['id']; ?>">
                     </div>
-
                 <?php
                 }
                 ?>
             </div>
-
             <div class="subm">
                 <input type="hidden" name="subject_id" value="<?= $topic['id']; ?>">
                 <input type="submit" value="確定編輯">
+                <button onclick="location.href='../backend.php'">取消</button>
             </div>
         </form>
     </main>

@@ -23,7 +23,7 @@
     <div>
         <input type="hidden" name="subject_id" value="<?= $_GET['id']; ?>">
         <input type="submit" value="投票">
-        <input type="button" value="取消">
+        <input type="button" value="取消" onclick="location.href='./backend.php'">
     </div>
 
 </form>

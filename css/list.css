@@ -1,10 +1,11 @@
 .list-item-title {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-align: center;
 }
 
 .list-item {
     text-align: center;
+    margin-bottom: 5px;
 }
 
 .time-set {
@@ -41,7 +42,7 @@
 
 .list-item-title:nth-child(1),
 .list-item:nth-child(1) {
-    width: 40%;
+    width: 30%;
 }
 
 .list-item-title:nth-child(2),
@@ -51,12 +52,12 @@
 
 .list-item-title:nth-child(3),
 .list-item:nth-child(3) {
-    width: 15%;
+    width: 30%;
 }
 
 .list-item-title:nth-child(4),
 .list-item:nth-child(4) {
-    width: 10%;
+    width: 5%;
 }
 
 .list-item-title:nth-child(5),

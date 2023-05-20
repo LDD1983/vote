@@ -4,7 +4,7 @@ header {
     background-color: lightpink;
     /* opacity: 0.5; */
     height: 40px;
-    padding-top: 9px;
+    padding-top: 10px;
     /* position: fixed; */
     /* top: 0; */
 }
@@ -13,12 +13,14 @@ nav {
     display: flex;
     justify-content: center;
     /* margin-top: 5px; */
-    border: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
     height: 40px;
-    padding-top: 9px;
+    padding-top: 11px;
     /* background-color: lightgrey; */
     /* color: black; */
     /* height: 20px;    */
+    width: 80%;
+    margin: 0 auto;
 
 }
 
@@ -31,7 +33,7 @@ header>a {
 }
 
 nav>a {
-    color: #ccc;
+    color: #adaaaa;
     text-decoration: none;
     margin-left: 20px;
     font-weight: 500;

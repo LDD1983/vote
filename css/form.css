@@ -1,0 +1,51 @@
+form>div {
+    margin-bottom: 10px;
+}
+/* .options>div {
+    margin-bottom: 5px;
+} */
+form .options span{
+    font-size: 1.5rem;
+    color: #7e7b7b;
+}
+form hr{
+    width: 50%;
+}
+form h1{
+    background-color: lightpink;
+    color: white;
+    font-size: 1.4rem;
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    height: 2rem;
+    padding-top: 3px;
+    font-weight: 200;
+}
+form input{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+/* label{
+    width: 500px;
+} */
+/* .timeset{
+    display: flex;} */
+form .time {
+    margin-bottom: 10px;
+}
+.subj,
+.type,
+#option {
+    text-align: center;
+}
+#subject,
+#open_date,
+#close_date {
+    width: 200px;
+}
+.subm {
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 10px;
+}

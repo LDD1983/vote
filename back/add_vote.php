@@ -10,44 +10,11 @@
     <link rel="stylesheet" href="../css/center.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/form.css">
 
 
 
-    <style>
-        form>div {
-            margin-bottom: 10px;
-        }
-        .options>div {
-            margin-bottom: 5px;
-        }
-
-        /* label{
-            width: 500px;
-        } */
-        /* .timeset{
-            display: flex;} */
-        .time {
-            margin-bottom: 10px;
-        }
-
-        .subj,
-        .type,
-        #option {
-            text-align: center;
-        }
-
-        #subject,
-        #open_date,
-        #close_date {
-            width: 200px;
-        }
-
-        .subm {
-            text-align: center;
-            margin-top: 30px;
-            border-radius: 10px;
-        }
-    </style>
+    
 </head>
 
 <body>

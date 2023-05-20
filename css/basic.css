@@ -1,4 +1,9 @@
 * {
     box-sizing: border-box;
     font-family: system-ui;
+    
+}
+button{
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
