@@ -1,3 +1,4 @@
+<form action="./api/vote_api.php" method="post">
 <h1>投票</h1>
 <?php
 
@@ -6,7 +7,7 @@ $options=$pdo->query("select * from `options` where `subject_id`='{$_GET['id']}'
 ?>
 
 <h2><?=$topic['subject'];?></h2>
-<form action="./api/vote_api.php" method="post">
+
 <ul>
 <?php
 foreach($options as $idx => $opt){

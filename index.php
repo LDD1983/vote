@@ -9,6 +9,14 @@
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/basic.css">
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/center.css">
+    <style>
+        ul{
+            width: 80%;
+            list-style: none;
+        }
+        
+    </style>
 </head>
 <body>
     <header>

@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/center.css">
     <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        li{
+            list-style: none;
+        }
+    </style>
 
  
 </head>
@@ -25,18 +30,30 @@
         <?php
         include_once "../db.php";
         $row=$pdo->query("select * from `topic` where `id`='{$_GET['id']}'" )->fetch(PDO::FETCH_ASSOC);
-        $row2=$pdo->query("select * from `options` where `subject_id`='{$_GET['id']}'" )->fetch(PDO::FETCH_ASSOC);
+        $row2=$pdo->query("select * from `options` where `subject_id`='{$_GET['id']}'" )->fetchAll(PDO::FETCH_ASSOC);
         // echo"<pre>";
         // print_r($row2);
         // echo "</pre>";
         ?>
         <h3>確定刪除?</h3>
         <div>
+            <p>主題 : </p>
             <?=$row['subject'];?>
-            <?=$row2['description'];?>
+            <p>項目 : </p>
+            <?php
+            foreach($row2 as $row2d){
+            ?>
+            <li>
+            <?=$row2d['description'];?>
+            
+            </li>
+            <?php
+            }
+            ?>
+            <br>
         </div>
         <div>
-            <button onclick="location.href='../api/del_vote_api.php?id<?=$_GET['id'];?>'">delete</button>
+            <button onclick="location.href='../api/del_vote_api.php?id=<?=$_GET['id'];?>'">delete</button>
             <button onclick="location.href='../backend.php'">取消</button>
         </div>
     </main>

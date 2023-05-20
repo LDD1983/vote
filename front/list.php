@@ -10,9 +10,10 @@ $rows=$pdo->query($sql)->fetchAll();
 foreach($rows as $row){
 ?>
 <li>
-    <?=$row['subject'];?>
+    <p><?=$row['subject'];?></p>
     <button onclick="location.href='?do=vote&id=<?=$row['id'];?>'">我要投票</button>
 </li>
+<hr>
 <?php
 }
 ?>

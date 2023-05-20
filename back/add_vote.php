@@ -47,7 +47,7 @@
     <a href="logout.php">登出</a>
    </header>
    <nav>
-        <a href="./back/add_vote.php">新增投票</a>
+        <a href="../backend.php">返回管理</a>
         <a href="./back/que_vote.php">結果查詢</a>
    </nav>
 
