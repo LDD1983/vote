@@ -1,3 +1,6 @@
+form{
+    width: 100%;
+}
 form>div {
     margin-bottom: 10px;
 }
@@ -21,10 +24,12 @@ form h1{
     height: 2rem;
     padding-top: 3px;
     font-weight: 200;
+    border-radius: 5px;
 }
 form input{
     border: 1px solid #ccc;
     border-radius: 5px;
+    line-height: normal;
 }
 /* label{
     width: 500px;

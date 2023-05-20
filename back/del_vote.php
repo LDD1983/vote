@@ -12,7 +12,9 @@
     <link rel="stylesheet" href="../css/reset.css">
     <style>
         li {
-            list-style: none;
+            
+            text-align: left;
+            padding-left: 45%;
         }
     </style>
 

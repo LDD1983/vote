@@ -11,12 +11,32 @@
     <link rel="stylesheet" href="./css/basic.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/center.css">
+    <link rel="stylesheet" href="./css/form.css">
    
     <style>
         ul {
             width: 80%;
             list-style: none;
             margin: 0;
+        }
+        .desc-ul{
+            text-align: left;
+            padding-left: 45%;
+            margin-bottom: 15px;
+        }
+        .desc-ul>li{
+            margin-bottom: 5px;
+        }
+        h3{
+            letter-spacing: 10px;
+            opacity: 0.6;
+            border-bottom: 1px solid #ccc;
+            width: 80%;
+            margin: 10px auto;
+            padding-bottom: 5px;
+        }
+        hr{
+            opacity: 0.5;
         }
     </style>
 </head>

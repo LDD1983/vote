@@ -76,7 +76,7 @@ $options = $pdo->query("select * from `options` where `subject_id`='{$_GET['id']
             </div>
             <div class="subm">
                 <input type="hidden" name="subject_id" value="<?= $topic['id']; ?>">
-                <input type="submit" value="確定編輯">
+                <input type="submit" value="確定編輯" >
                 <button onclick="location.href='../backend.php'">取消</button>
             </div>
         </form>
