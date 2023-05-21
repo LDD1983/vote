@@ -11,7 +11,7 @@
     ?>
         <li>
             <p><?= $row['subject']; ?></p>
-            <button onclick="location.href='?do=vote&id=<?= $row['id']; ?>'">我要投票</button>
+            <button onclick="location.href='?do=vote&id=<?= $row['id']; ?>'">來去投票</button>
         </li>
         <hr>
     <?php

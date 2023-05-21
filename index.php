@@ -27,16 +27,38 @@
         .desc-ul>li{
             margin-bottom: 5px;
         }
+        li>p{
+            font-size: 1.1rem;
+            letter-spacing: 5px;
+            opacity: 0.7;
+        }
+        li>button{
+            width: 100px;
+            height: 30px;
+            background-color:#FFC1C1;
+            /* color: white; */
+            border: 1px solid pink;
+            opacity: 0.5;
+            font-size: 0.9rem;
+            
+        }
+        li>button:hover{
+            opacity: 0.9;
+            /* background-color:white; */
+        }
         h3{
             letter-spacing: 10px;
             opacity: 0.6;
             border-bottom: 1px solid #ccc;
-            width: 80%;
+            width: 60%;
             margin: 10px auto;
             padding-bottom: 5px;
         }
         hr{
-            opacity: 0.5;
+            border:0.5px solid #ccc;
+            opacity: 0.6;
+            width: 40%;
+            margin-top: 15px;
         }
     </style>
 </head>
