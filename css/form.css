@@ -2,7 +2,7 @@ form{
     width: 100%;
 }
 .vote{
-    margin-top: 5%;
+    margin-top: 2%;
 }
 form>div {
     margin-bottom: 10px;
@@ -56,4 +56,20 @@ form .time {
     text-align: center;
     margin-top: 10px;
     border-radius: 10px;
+}
+.f-inB{
+    height: 90px;
+    margin: 0 auto;
+    /* border: 1px solid #ccc; */
+    position: relative;
+}
+.go-vote-out{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.go-vote-out:hover{
+    background-color: #fff;
+    font-weight: 900;
+
 }

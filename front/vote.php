@@ -31,10 +31,13 @@ $options=$pdo->query("select * from `options` where `subject_id`='{$_GET['id']}'
         ?>
     </ul>
 
-    <div>
+    <div class="f-inB">
         <input type="hidden" name="subject_id" value="<?=$_GET['id'];?>">
-        <input type="submit" value="投票">
-        <input type="button" value="取消" onclick="location.href='./index.php'">
+        <input class="go-vote-in" type="submit" value="投票">       
+    </div>
+    <hr>
+    <div class="f-inB">             
+        <input class="go-vote-out" type="button" value="取消" onclick="location.href='./index.php'">
     </div>
 
 </form>

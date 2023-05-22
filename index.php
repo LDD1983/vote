@@ -23,19 +23,20 @@ include_once "./db.php";
         ul {
             width:100%;
             list-style: none;
-            margin: 0;
+            margin: 0 auto;
         }
         .desc-ul{
             text-align: left;
-            padding-left: 45%;
+            padding-left: 7%;
             margin-bottom: 15px;
+            width: 20%;
         }
         .desc-ul>li{
             margin-bottom: 5px;
         }
         ul>.vote-option-title{
             font-size: 1.5rem;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             opacity: 0.8;
 
             text-align:center;
@@ -43,23 +44,32 @@ include_once "./db.php";
         .vote-item{
             display: inline-block;
             margin-bottom: 5px;
+            font-size: 1.rem;
 
         }
         .vote-item>a{
             text-decoration: none;
+            letter-spacing: 1px;
             font-size: 1.15rem;
+            color: rosybrown;
+            opacity: 0.9;
         }
+        .vote-item>a:hover{
+            font-weight: 100;
+        }
+
         .vote-item:first-child{
-            width: 5%;
+            width: 8%;
+            text-align: left;
         }
         .vote-item:nth-child(2){
             width: 20%;
             text-align: left;
-            padding-left: 5%;
+            padding-left: 4%;
         }
         .vote-item:nth-child(3){
             width: 10%;
-        }
+        }       
         .index-li{
             position: relative;
         }
@@ -67,15 +77,16 @@ include_once "./db.php";
 
 
         .index-li>p{
-            font-size: 1.2rem;
-            letter-spacing: 5px;
+            font-size: 1.3rem;
+            letter-spacing: 5.5px;
             opacity: 0.7;
             position: relative;
             text-align: left;
             left: 21%;
-            margin-bottom: 25px;
-            border-left: 8rem solid #ccc;
+            margin:0;
+            border-left: 7rem solid #ccc;
             padding-left: 1rem;
+            margin-top: 20px;
         }
         li>button{
             width: 100px;
@@ -83,7 +94,7 @@ include_once "./db.php";
             background-color:#FFC1C1;
             /* color: white; */
             border: 1px solid #ccc;
-            opacity: 0.5;
+            opacity: 0.6;
             font-size: 0.9rem;
             position: relative;
             left: 10%;
@@ -91,14 +102,15 @@ include_once "./db.php";
         }
         li>.go-vote{
             position: absolute;
-            bottom: 0px;
+            bottom: -8px;
             height: 66px;
             left: 70%;
             width: 80px;
             rotate: 3deg;
             text-transform: uppercase;
         }
-        li>.go-vote:hover{
+        li>.go-vote:hover,
+        .go-vote-in:hover{
             rotate: 20deg;
             bottom: -12px;
             height: 50px;
@@ -108,6 +120,19 @@ include_once "./db.php";
             background-color: #FFC1C1;
             content: 'vote';
             }
+        .go-vote-in{
+            position: absolute;
+            height: 66px;
+            right: 47%;
+           
+            width: 100px;
+            rotate: 3deg;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            background-color: #FFC1C1;
+            bottom: -10 ;          
+
+        }
         /* li>.go-vote:after{
             content: 'vote';
         } */
@@ -145,8 +170,8 @@ include_once "./db.php";
             font-size: 2rem;
         }
         hr{
-            border:0.5px solid #ccc;
-            opacity: 0.6;
+            border: 0.3px solid #ccc;
+            opacity: 0.4;
             width: 60%;
             margin-top: 10px;
         }
@@ -162,13 +187,17 @@ include_once "./db.php";
          position: absolute;
          border: 2px solid  #FFC1C1;
          width: 73px;
-         bottom: 0px;
+         bottom: -1px;
          height: 30px;
          left: 63%;
+         opacity: 0.9;
 
         }
         .vip-login{
-            box-shadow: 2px 2px 1px rosybrown;
+            color: white;
+            box-shadow: 2px 2px 3px 3px #ffdf65;
+            background-color: lightpink;
+            border: 1px solid white;
         }
         
           
