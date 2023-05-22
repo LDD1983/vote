@@ -47,20 +47,50 @@
 
 .list-item-title:nth-child(2),
 .list-item:nth-child(2) {
-    width: 5%;
+    width: 15%;
 }
 
 .list-item-title:nth-child(3),
 .list-item:nth-child(3) {
-    width: 30%;
+    width: 35%;
 }
 
 .list-item-title:nth-child(4),
 .list-item:nth-child(4) {
-    width: 5%;
+    width: 15%;
 }
 
 .list-item-title:nth-child(5),
 .list-item:nth-child(5) {
     width: 25%;
+}
+
+
+.await,
+.in-process,
+.finish
+{
+    width: 40%;
+    margin: 0 auto;
+    padding:2px 5px;
+    border-radius:5px;
+    
+    border:0;
+    font-size:12px;
+}
+.await{
+    background:rgb(248, 227, 33);
+    color:rgb(194, 133, 1);
+}
+.in-process{
+   
+    background:lightskyblue;
+    color:blue;
+}
+   
+.finish{
+   
+    background:lightgreen;
+    color:darkgreen;
+  
 }

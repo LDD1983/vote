@@ -12,9 +12,22 @@
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/list.css">
     <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        .img{
+            display: flex;
+        }
+        .img>img{
+            width: 100%;
+        }
+
+    </style>
+        
 </head>
 
 <body>
+    <div class="img">
+        <img src="./img/vote2.png" alt="">
+    </div>
     <header>
         <a href="index.php">首頁</a>
         <a href="logout.php">登出</a>
