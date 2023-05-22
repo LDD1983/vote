@@ -1,18 +1,18 @@
 <ul>
-    <?php
+<?php
     $sql = "select * from `topic` where `close_date` >= '".date("Y-m-d H:i:s")."'";
 
 
     $rows = $pdo->query($sql)->fetchAll();
     // echo "<pre>";
-    // print_r($sql);
+    // print_r($rows);
     // echo "</pre>";
     foreach ($rows as $idx => $row) {
     ?>
-        <li>
+        <li class="index-li">
             <p>主題 : <?= $row['subject']; ?> </p>
-                <button class="type-info" >
-                <?php
+                <button class="type-info" > 
+<?php
                     switch($row['type']){
                         case 1:
                             echo "單選";
@@ -23,18 +23,18 @@
                     }
                 ?>
                 </button>       
-                <?php
+<?php
                         if($row['login']==1){
                         echo "<button class='vip-login'>";
                         echo "會員限定";                
                     }else{
-                        echo "<button class='normal' >";
+                        echo "<button class='normal'>";
                         echo "公開";
                     }
                 ?>
-        </button>
+           </button>
             
-            <button class="go-vote" onclick="location.href='?do=vote&id=<?= $row['id']; ?>'">vote</button>
+           <button class="go-vote" onclick="location.href='?do=vote&id=<?=$row['id'];?>'">我要投票</button>
         </li>
         <hr>
     <?php

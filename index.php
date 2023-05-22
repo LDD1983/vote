@@ -1,21 +1,27 @@
-<?php include_once "./db.php";?>
+<?php 
+include_once "./db.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>黑箱作業</title>
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/basic.css">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/center.css">
-    <link rel="stylesheet" href="./css/form.css">
+        <link rel="stylesheet" href="./css/basic.css">
+        <link rel="stylesheet" href="./css/center.css">
+        <link rel="stylesheet" href="./css/header.css">
+        <link rel="stylesheet" href="./css/list.css">
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/form.css">
+
+
+    
 
     <style>
         ul {
-            width: 80%;
+            width:100%;
             list-style: none;
             margin: 0;
         }
@@ -54,20 +60,22 @@
         .vote-item:nth-child(3){
             width: 10%;
         }
-        li{
+        .index-li{
             position: relative;
         }
 
 
 
-        li>p{
-            font-size: 1.1rem;
+        .index-li>p{
+            font-size: 1.2rem;
             letter-spacing: 5px;
             opacity: 0.7;
             position: relative;
             text-align: left;
-            left: 30%;
+            left: 21%;
             margin-bottom: 25px;
+            border-left: 8rem solid #ccc;
+            padding-left: 1rem;
         }
         li>button{
             width: 100px;
@@ -85,25 +93,34 @@
             position: absolute;
             bottom: 0px;
             height: 66px;
-            left: 68%;
+            left: 70%;
             width: 80px;
             rotate: 3deg;
             text-transform: uppercase;
         }
         li>.go-vote:hover{
-            rotate: 15deg;
-
-        }
-        .type-info{
-
-
-
+            rotate: 20deg;
+            bottom: -12px;
+            height: 50px;
+            font-size: 0;
+            opacity: 0.4;
+            border: 1px solid black;
+            background-color: #FFC1C1;
+            content: 'vote';
+            }
+        /* li>.go-vote:after{
+            content: 'vote';
+        } */
+        .type-info,
+        .vip-login,
+        .normal{
             border-radius: 20px;
             width: 50px;
             background-color: #fff;
             border-color: rosybrown;
             height: 20px;
             font-size: 0.5rem;
+         
         }
         .chebox{
             border-radius: 10px;
@@ -137,92 +154,65 @@
             display: flex;
         }
         .img>img{
+         
             width: 100%;
         }
         .vip-login,
         .normal{
-            padding:2px 5px;
-            border-radius:5px;
+         position: absolute;
+         border: 2px solid  #FFC1C1;
+         width: 73px;
+         bottom: 0px;
+         height: 30px;
+         left: 63%;
 
-            border:0;
-            font-size:12px;
-            border-radius: 20px;
-            width: 60px;
-            height: 20px;
         }
         .vip-login{
-            background:rgb(248, 227, 33);
-            color:rgb(194, 133, 1);
-        }
-        .normal{
-            background:lightskyblue;
-            color:blue;   
+            box-shadow: 2px 2px 1px rosybrown;
         }
         
-       
+          
     </style>
 </head>
-
-<body>
-   
+<body>  
     <div class="img">
         <img src="./img/vote.png" alt="">
     </div>
     <header>
-        <a href="index.php">首頁</a>
-        <a href="index.php?do=res.list">結果</a>
-        <?php
-            if (!isset($_SESSION['login'])) {
-        ?>
-            <a href="index.php?do=login">登入</a>
-            <a href="index.php?do=reg">註冊</a>
-        <?php
-            } else {
-        ?>
-            <a href="./api/logout_api.php">登出</a>
-        <?php
-            }
-        ?>
-        <a href="./backend.php">管理</a>
-    </header>
+    <a href="index.php">首頁</a>
+    <a href="index.php?do=result_list">結果</a>
+    <?php
+    if(!isset($_SESSION['login'])){
+    ?>
+        <a href="index.php?do=login">登入</a>
+        <a href="index.php?do=reg">註冊</a>
+    <?php
+    }else{
+    ?>
+        <a href="./api/logout.php">登出</a>
+    <?php
+    }
+    ?>
+       <a href="./backend.php">back</a>
+
+</header>
     <main>
-        <?php
-            $do = $_GET['do'] ?? 'list';
-            $file = "./front/" . $do . ".php";
-            if (file_exists($file)) {
-                include $file;
-            } else {
-                include "./front/list.php";
-            }
-        ?>
-    </main>
-    <footer>
 
-        <?php
-            // echo date("Y-m-d H:i:s",strtotime("now"))."<br>";
-        ?>
-        <?php
-            // echo date("Y-m-d H:i:s",strtotime("-1 second"));
-        ?> 
+<?php
 
-    </footer>
-<!-- <script>
-    let img = document.getElementById('img');
-    let header = document.getElementById('header');
-    let main = document.getElementById('main');
-    let curtain = document.getElementById('curtain');
+$do=$_GET['do']??'list';
 
-    
+$file="./front/".$do.".php";
 
-    curtain.addEventListener('click',function () {
-        // console.log('fun ok');
-        
-        this.style.display='none';
-        
+if(file_exists($file)){
+    include $file;
+}else{
+    include "./front/list.php";
+}
+?>
 
+</main>
+<footer></footer>
 
-    }) -->
-</script>
 </body>
-
 </html>
