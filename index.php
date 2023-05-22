@@ -1,5 +1,4 @@
 <?php include_once "./db.php";?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -55,6 +54,9 @@
         .vote-item:nth-child(3){
             width: 10%;
         }
+        li{
+            position: relative;
+        }
 
 
 
@@ -75,6 +77,21 @@
             border: 1px solid #ccc;
             opacity: 0.5;
             font-size: 0.9rem;
+            position: relative;
+            left: 10%;
+
+        }
+        li>.go-vote{
+            position: absolute;
+            bottom: 0px;
+            height: 66px;
+            left: 68%;
+            width: 80px;
+            rotate: 3deg;
+            text-transform: uppercase;
+        }
+        li>.go-vote:hover{
+            rotate: 15deg;
 
         }
         .type-info{
@@ -122,52 +139,90 @@
         .img>img{
             width: 100%;
         }
+        .vip-login,
+        .normal{
+            padding:2px 5px;
+            border-radius:5px;
+
+            border:0;
+            font-size:12px;
+            border-radius: 20px;
+            width: 60px;
+            height: 20px;
+        }
+        .vip-login{
+            background:rgb(248, 227, 33);
+            color:rgb(194, 133, 1);
+        }
+        .normal{
+            background:lightskyblue;
+            color:blue;   
+        }
+        
+       
     </style>
 </head>
 
 <body>
+   
     <div class="img">
         <img src="./img/vote.png" alt="">
     </div>
     <header>
         <a href="index.php">首頁</a>
         <a href="index.php?do=res.list">結果</a>
-    <?php
-        if (!isset($_SESSION['login'])) {
-    ?>
-        <a href="index.php?do=login">登入</a>
-        <a href="index.php?do=reg">註冊</a>
-    <?php
-        } else {
-    ?>
-        <a href="./api/logout_api.php">登出</a>
-    <?php
-        }
-    ?>
+        <?php
+            if (!isset($_SESSION['login'])) {
+        ?>
+            <a href="index.php?do=login">登入</a>
+            <a href="index.php?do=reg">註冊</a>
+        <?php
+            } else {
+        ?>
+            <a href="./api/logout_api.php">登出</a>
+        <?php
+            }
+        ?>
         <a href="./backend.php">管理</a>
     </header>
     <main>
-    <?php
-        $do = $_GET['do'] ?? 'list';
-        $file = "./front/" . $do . ".php";
-        if (file_exists($file)) {
-            include $file;
-        } else {
-            include "./front/list.php";
-        }
-    ?>
+        <?php
+            $do = $_GET['do'] ?? 'list';
+            $file = "./front/" . $do . ".php";
+            if (file_exists($file)) {
+                include $file;
+            } else {
+                include "./front/list.php";
+            }
+        ?>
     </main>
     <footer>
-<!--  -->
-<?php
-    // echo date("Y-m-d H:i:s",strtotime("now"))."<br>";
-?>
-<?php
-    // echo date("Y-m-d H:i:s",strtotime("-1 second"));
-?> 
+
+        <?php
+            // echo date("Y-m-d H:i:s",strtotime("now"))."<br>";
+        ?>
+        <?php
+            // echo date("Y-m-d H:i:s",strtotime("-1 second"));
+        ?> 
 
     </footer>
+<!-- <script>
+    let img = document.getElementById('img');
+    let header = document.getElementById('header');
+    let main = document.getElementById('main');
+    let curtain = document.getElementById('curtain');
 
+    
+
+    curtain.addEventListener('click',function () {
+        // console.log('fun ok');
+        
+        this.style.display='none';
+        
+
+
+    }) -->
+</script>
 </body>
 
 </html>

@@ -11,7 +11,7 @@ if($topic['login']==1){
     if(!isset($_SESSION['login'])){
                             //   絕對目錄在index下面的網址
         $_SESSION['position']="/index.php?do=vote&id={$_GET['id']}";
-        header("location:index.php?do=login&msg=");
+        header("location:index.php?do=login&msg=1");
     }
 }
 

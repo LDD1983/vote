@@ -1,5 +1,6 @@
 
 
+
 <form action="../api/login_api.php" method="post">
     <h3>會員登入</h3>
     <?php
@@ -8,6 +9,11 @@
         echo "帳號密碼錯誤";
         echo "</span>";
         }
+    if(isset($_GET['msg'])){
+        echo "<span style='color:orange'>";
+        echo $msg[$_GET['msg']];
+        echo "</span>"; 
+    }
     ?>
     <div>
         <label for="acc">帳號 : </label>
