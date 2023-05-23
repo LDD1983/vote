@@ -195,7 +195,7 @@ include_once "./db.php";
         .vip-login,
         .normal{
          position: absolute;
-         border: 2px solid  #FFC1C1;
+         border: none;
          width: 73px;
          bottom: 0px;
          height: 30px;
@@ -203,11 +203,17 @@ include_once "./db.php";
          opacity: 0.9;
 
         }
+        .normal{
+            box-shadow: 3px 3px 8px 3px lightpink;
+        }
         .vip-login{
-            color: white;
-            box-shadow: 2px 2px 3px 3px #ffdf65;
-            background-color: lightpink;
-            border: 1px solid white;
+            /* color: white;
+            box-shadow: 3px 3px 20px 6px #ccc; */
+            /* box-shadow: 2px 2px 15px 3px lightgrey; */
+            /* background-color: silver;
+            border: 1px solid whitesmoke; */
+            background-image: url(./img/vip_logo.png);
+            background-size:cover;
         }
         div>.img-logoT{
             position: relative;

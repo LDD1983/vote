@@ -26,7 +26,7 @@
 <?php
                         if($row['login']==1){
                         echo "<button class='vip-login'>";
-                        echo "會員限定";                
+                        echo " ";                
                     }else{
                         echo "<button class='normal'>";
                         echo "公開";
@@ -34,7 +34,7 @@
                 ?>
            </button>
             
-           <button class="go-vote" onclick="location.href='?do=vote&id=<?=$row['id'];?>'">我要投票</button>
+           <button class="go-vote" onclick="location.href='?do=vote&id=<?=$row['id'];?>'">vote</button>
         </li>
         <hr>
     <?php
