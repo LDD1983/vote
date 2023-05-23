@@ -84,9 +84,10 @@ include_once "./db.php";
             text-align: left;
             left: 21%;
             margin:0;
-            border-left: 7rem solid #ccc;
+            border-left: 7rem solid #393434;
             padding-left: 1rem;
             margin-top: 20px;
+         
         }
         li>button{
             width: 100px;
@@ -108,6 +109,7 @@ include_once "./db.php";
             width: 80px;
             rotate: 3deg;
             text-transform: uppercase;
+            text-shadow: 1px 1px 2px rosybrown;
         }
         li>.go-vote:hover,
         .go-vote-in:hover{
@@ -117,8 +119,9 @@ include_once "./db.php";
             font-size: 0;
             opacity: 0.4;
             border: 1px solid black;
-            background-color: #FFC1C1;
+            background-color: white;
             content: 'vote';
+            background-image: url(./img/vote_ticket.png);
             }
         .go-vote-in{
             position: absolute;
@@ -139,14 +142,19 @@ include_once "./db.php";
         .type-info,
         .vip-login,
         .normal{
-            border-radius: 20px;
+            border-radius: 30px;
             width: 50px;
             background-color: #fff;
             border-color: rosybrown;
-            height: 20px;
+            height: 30px;
             font-size: 0.5rem;
          
         }
+        /* .type-info{
+            position: absolute;
+            bottom: -10px;
+            left: 50%; */
+        
         .chebox{
             border-radius: 10px;
         }
@@ -168,6 +176,7 @@ include_once "./db.php";
             margin: 10px auto;
             padding-bottom: 5px;
             font-size: 2rem;
+           
         }
         hr{
             border: 0.3px solid #ccc;
@@ -176,7 +185,8 @@ include_once "./db.php";
             margin-top: 10px;
         }
         .img{
-            display: flex;
+            display:flex;
+           
         }
         .img>img{
          
@@ -187,7 +197,7 @@ include_once "./db.php";
          position: absolute;
          border: 2px solid  #FFC1C1;
          width: 73px;
-         bottom: -1px;
+         bottom: 0px;
          height: 30px;
          left: 63%;
          opacity: 0.9;
@@ -199,12 +209,27 @@ include_once "./db.php";
             background-color: lightpink;
             border: 1px solid white;
         }
+        div>.img-logoT{
+            position: relative;
+            bottom: 500px;
+        }
+        .text{
+            display: flex;
+        }
+        .logo{
+            display:none;
+
+        }
+
         
           
     </style>
 </head>
 <body>  
-    <div class="img">
+    <div class="img logo" id="logoB">
+        <img src="./img/logo.png" alt="">
+    </div>
+    <div class="img text" id="logoA">
         <img src="./img/vote.png" alt="">
     </div>
     <header>
@@ -218,7 +243,7 @@ include_once "./db.php";
     <?php
     }else{
     ?>
-        <a href="./api/logout.php">登出</a>
+        <a href="./api/logout_api.php">登出</a>
     <?php
     }
     ?>
@@ -243,5 +268,24 @@ if(file_exists($file)){
 </main>
 <footer></footer>
 
+<script>
+    let logoA = document.getElementById('logoA');
+    let logoB = document.getElementById('logoB');
+
+    logoA.addEventListener('mouseover', function(){
+        // console.log('AA');
+        this.style.display='none';
+        logoB.style.display='flex';
+        
+    })
+    logoA.addEventListener('mouseout', function(){
+        // console.log('AA');
+        this.style.display='flex';
+        logoB.style.display='none';
+        
+    })
+
+
+</script>
 </body>
 </html>
