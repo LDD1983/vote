@@ -21,12 +21,26 @@ $options = $pdo->query("select * from `options` where `subject_id`='{$_GET['id']
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/form.css">
     <script src="../Js/jquery-3.7.0.min.js"></script>
+    <style>
+        .img{
+            display: flex;
+        }
+        .img>img{
+            width: 100%;
+           
+        }
+
+    </style>
 
 
-   
+
+    
 </head>
 
 <body>
+    <div class="img">
+        <img src="/img/vote2.png" alt="">
+    </div>
     <header>
         <a href="../index.php">首頁</a>
         <a href="logout.php">登出</a>

@@ -18,7 +18,7 @@ form hr{
     width: 50%;
 }
 form h1{
-    background-color: lightpink;
+    background-image: linear-gradient(to right , #f5f4f4, lightpink, #f5f4f4);
     color: white;
     font-size: 1.4rem;
     width: 60%;

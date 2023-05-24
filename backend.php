@@ -49,7 +49,7 @@
         //$do=(isset($_GET['do']))?$_GET['do']:'topic_list';
         $do = $_GET['do'] ?? 'topic_list';
 
-        $file = "./back/" . $do . ".php";
+        $file = "./back/". $do.".php";
 
         if (file_exists($file)) {
             include $file;
@@ -57,18 +57,18 @@
             include "./back/topic_list.php";
         }
 
-        //include (file_exists($file))?$file:"./back/topic_list.php";
-        /* 
-        switch($_GET['do']){
-            case "add_vote":
-                include "./back/add_vote.php";
-            break;
-            case 'query_vote':
-                include "./back/query_vote.php";
-            break;
-            default :
-                include "./back/topic_list.php";
-        } */
+        // include (file_exists($file))?$file:"./back/topic_list.php";
+        
+        // switch($_GET['do']){
+        //     case "add_vote":
+        //         include "./back/add_vote.php";
+        //     break;
+        //     case 'query_vote':
+        //         include "./back/query_vote.php";
+        //     break;
+        //     default :
+        //         include "./back/topic_list.php";
+        // }
         ?>
     </main>
     <footer>

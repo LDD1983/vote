@@ -123,14 +123,21 @@ include_once "./db.php";
         .go-vote-in{
             position: absolute;
             height: 66px;
-            right: 47%;
+            right: 48%;
            
             width: 100px;
-            rotate: 3deg;
+            background-image: linear-gradient(to bottom right, white, lightpink);
+           
             text-transform: uppercase;
             margin-bottom: 20px;
-            background-color: #FFC1C1;
-            bottom: -10 ;          
+          
+            bottom: -10px;   
+            color: floralwhite;;    
+            font-size: 1rem;
+            font-weight: bold;
+            border: none;
+            box-shadow: 5px 4px 9px 1px lightgray;
+            padding-top: 2%;       
 
         }
         /* li>.go-vote:after{
@@ -185,12 +192,16 @@ include_once "./db.php";
             position: relative;
             bottom: 500px;
         }
-        .text{
-            display: flex;
+        .img{
+           display: flex;
         }
-        .logo{
-            display:none;
-
+        .img>img{
+            max-width: 100%;
+            height: auto;
+            
+        }
+        #logoB{
+            display: none;
         }
 
         

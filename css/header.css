@@ -8,6 +8,7 @@ header {
     /* position: fixed; */
     /* top: 0; */
     background-image: linear-gradient(to right, white, lightpink,white);
+    padding-right: 7%;
 }
 
 nav {
@@ -31,6 +32,7 @@ header>a {
     text-decoration: none;
     font-weight: 500;
     font-size: 1.1rem;
+    text-shadow: 3px 1px 6px #a10a0a8f;
 }
 
 nav>a {
@@ -41,7 +43,9 @@ nav>a {
     font-size: 18px;
 }
 
-header>a:hover,
+header>a:hover{
+    color: #9d9797;
+}
 nav>a:hover {
-    font-weight: 300;
+   color:#ff7b7b;
 }
