@@ -1,12 +1,13 @@
 header {
     display: flex;
     justify-content: center;
-    background-color: lightpink;
+    /* background-color: lightpink; */
     /* opacity: 0.5; */
     height: 40px;
     padding-top: 10px;
     /* position: fixed; */
     /* top: 0; */
+    background-image: linear-gradient(to right, white, lightpink,white);
 }
 
 nav {
@@ -25,7 +26,7 @@ nav {
 }
 
 header>a {
-    color: whitesmoke;
+    color: brown;
     margin-left: 7%;
     text-decoration: none;
     font-weight: 500;

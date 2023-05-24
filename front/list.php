@@ -10,7 +10,7 @@
     foreach ($rows as $idx => $row) {
     ?>
         <li class="index-li">
-            <p>主題 : <?= $row['subject']; ?> </p>
+            <p class="main-subject">主題 : <?= $row['subject']; ?> </p>
                 <button class="type-info" > 
 <?php
                     switch($row['type']){
@@ -26,7 +26,7 @@
 <?php
                         if($row['login']==1){
                         echo "<button class='vip-login'>";
-                        echo " ";                
+                        echo "會員限定";                
                     }else{
                         echo "<button class='normal'>";
                         echo "公開";

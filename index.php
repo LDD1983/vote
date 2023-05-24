@@ -76,26 +76,16 @@ include_once "./db.php";
 
 
 
-        .index-li>p{
-            font-size: 1.3rem;
-            letter-spacing: 5.5px;
-            opacity: 0.7;
-            position: relative;
-            text-align: left;
-            left: 21%;
-            margin:0;
-            border-left: 7rem solid #393434;
-            padding-left: 1rem;
-            margin-top: 20px;
+       
          
-        }
+        
         li>button{
             width: 100px;
             height: 30px;
             background-color:#FFC1C1;
             /* color: white; */
             border: 1px solid #ccc;
-            opacity: 0.6;
+            opacity: 1;
             font-size: 0.9rem;
             position: relative;
             left: 10%;
@@ -103,17 +93,24 @@ include_once "./db.php";
         }
         li>.go-vote{
             position: absolute;
-            bottom: -8px;
+            bottom: -3px;
             height: 66px;
             left: 70%;
             width: 80px;
-            rotate: 3deg;
+            /* rotate: 3deg; */
             text-transform: uppercase;
-            text-shadow: 1px 1px 2px rosybrown;
+            
+            background-image: linear-gradient(to bottom right, white, lightpink);
+            color: floralwhite;;
+            font-size: 1rem;
+            font-weight: bold;
+            border: none;
+            box-shadow: 5px 4px 9px 1px lightgray;
+            padding-top: 2%;
         }
         li>.go-vote:hover,
         .go-vote-in:hover{
-            rotate: 20deg;
+            rotate: 10deg;
             bottom: -12px;
             height: 50px;
             font-size: 0;
@@ -139,17 +136,7 @@ include_once "./db.php";
         /* li>.go-vote:after{
             content: 'vote';
         } */
-        .type-info,
-        .vip-login,
-        .normal{
-            border-radius: 30px;
-            width: 50px;
-            background-color: #fff;
-            border-color: rosybrown;
-            height: 30px;
-            font-size: 0.5rem;
-         
-        }
+       
         /* .type-info{
             position: absolute;
             bottom: -10px;
@@ -192,29 +179,8 @@ include_once "./db.php";
          
             width: 100%;
         }
-        .vip-login,
-        .normal{
-         position: absolute;
-         border: none;
-         width: 73px;
-         bottom: 0px;
-         height: 30px;
-         left: 63%;
-         opacity: 0.9;
-
-        }
-        .normal{
-            box-shadow: 3px 3px 8px 3px lightpink;
-        }
-        .vip-login{
-            /* color: white;
-            box-shadow: 3px 3px 20px 6px #ccc; */
-            /* box-shadow: 2px 2px 15px 3px lightgrey; */
-            /* background-color: silver;
-            border: 1px solid whitesmoke; */
-            background-image: url(./img/vip_logo.png);
-            background-size:cover;
-        }
+        
+        
         div>.img-logoT{
             position: relative;
             bottom: 500px;
@@ -253,7 +219,7 @@ include_once "./db.php";
     <?php
     }
     ?>
-       <a href="./backend.php">back</a>
+    
 
 </header>
     <main>
