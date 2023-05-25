@@ -106,6 +106,8 @@
     margin:0;
     /* border-left: 7rem solid #393434; */
     background-image: linear-gradient(to right, lightpink, #f5f4f4);
+    background-repeat: no-repeat;
+   
     border-left: 1% solid lightgrey;
     padding-left: 3rem;
     margin-top: 20px;
@@ -114,7 +116,18 @@
     padding-top: 0.3rem;
     color: revert;
     font-weight: lighter;
-}
+    animation-name: main-subject;
+    animation-duration: 6s;  
+    animation-fill-mode: forwards;
+    
+  }
+  
+  @keyframes main-subject {
+    0% {background-size: 0% 100%;}
+   
+    100% {background-size: 100% 100%;}
+  }
+
 .vip-login,
 .normal{
     position: absolute;
