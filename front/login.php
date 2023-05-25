@@ -5,14 +5,14 @@
 <h3>會員登入</h3>
 <?php
     if(isset($_GET['error'])){
-        echo "<span style='color:red'>";
+        echo "<p style='color:red'>";
         echo "帳號密碼錯誤";
-        echo "</span>";
+        echo "</p>";
         }
     if(isset($_GET['msg'])){
-        echo "<span style='color:orange'>";
+        echo "<p style='color:orange'>";
         echo $msg[$_GET['msg']];
-        echo "</span>"; 
+        echo "</p>"; 
     }
 ?>
    

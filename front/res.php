@@ -12,14 +12,14 @@ $subject = $pdo->query("select * from `topic` where `id` = $id")->fetch(PDO::FET
 
 
 <ul class="vote-res">
-    <h2>投票結果</h2>
+   
     <h3><?=$subject['subject'];?></h3>
      <li class="vote-option-title">
             <div class="vote-item">序號</div>
             <div class="vote-item">項目</div>
             <div class="vote-item">票數</div>
     </li>
-    <hr>
+   
     <?php
     foreach($options as $idx => $option){
         ?>

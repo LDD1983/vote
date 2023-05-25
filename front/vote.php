@@ -33,7 +33,7 @@ $options=$pdo->query("select * from `options` where `subject_id`='{$_GET['id']}'
 
     <div class="f-inB">
         <input type="hidden" name="subject_id" value="<?=$_GET['id'];?>">
-        <input class="go-vote-in" type="submit" value="投票">       
+        <input class="go-vote-in" type="submit" value="">       
     </div>
     <hr>
     <div class="f-inB">             

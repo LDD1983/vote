@@ -16,7 +16,7 @@ $subjects=$pdo->query("select `topic`.`id`,
         <div class="vote-item">主題</div>
         <div class="vote-item">票數</div>
     </li>
-    <hr>
+    
     <?php 
     foreach($subjects as $idx => $subject){
     ?>

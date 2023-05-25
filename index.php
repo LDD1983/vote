@@ -28,6 +28,7 @@ include_once "./db.php";
         .desc-ul{
             text-align: left;
             padding-left: 7%;
+            margin-top: 10px;
             margin-bottom: 15px;
             width: 20%;
         }
@@ -37,8 +38,8 @@ include_once "./db.php";
         ul>.vote-option-title{
             font-size: 1.5rem;
             letter-spacing: 3px;
-            opacity: 0.8;
-
+            opacity: 0.6;
+            margin-top: 5px;
             text-align:center;
         }
         .vote-item{
@@ -50,12 +51,13 @@ include_once "./db.php";
         .vote-item>a{
             text-decoration: none;
             letter-spacing: 1px;
-            font-size: 1.15rem;
-            color: rosybrown;
-            opacity: 0.9;
+            font-size: 1.4rem;
+            color: #501313;
+            opacity: 1;
         }
         .vote-item>a:hover{
-            font-weight: 100;
+            color: #ff7575;
+            
         }
 
         .vote-item:first-child{
@@ -63,7 +65,7 @@ include_once "./db.php";
             text-align: left;
         }
         .vote-item:nth-child(2){
-            width: 20%;
+            width: 40%;
             text-align: left;
             padding-left: 4%;
         }
@@ -85,61 +87,14 @@ include_once "./db.php";
             background-color:#FFC1C1;
             /* color: white; */
             border: 1px solid #ccc;
-            opacity: 1;
+       
             font-size: 0.9rem;
             position: relative;
             left: 10%;
 
         }
-        li>.go-vote{
-            position: absolute;
-            bottom: -3px;
-            height: 66px;
-            left: 70%;
-            width: 80px;
-            /* rotate: 3deg; */
-            text-transform: uppercase;
-            
-            background-image: linear-gradient(to bottom right, white, lightpink);
-            color: floralwhite;;
-            font-size: 1rem;
-            font-weight: bold;
-            border: none;
-            box-shadow: 5px 4px 9px 1px lightgray;
-            padding-top: 2%;
-        }
-        li>.go-vote:hover,
-        .go-vote-in:hover{
-            rotate: 10deg;
-            bottom: -12px;
-            height: 50px;
-            font-size: 0;
-            opacity: 0.4;
-            border: 1px solid black;
-            background-color: white;
-            content: 'vote';
-            background-image: url(./img/vote_ticket.png);
-            }
-        .go-vote-in{
-            position: absolute;
-            height: 66px;
-            right: 48%;
-           
-            width: 100px;
-            background-image: linear-gradient(to bottom right, white, lightpink);
-           
-            text-transform: uppercase;
-            margin-bottom: 20px;
-          
-            bottom: -10px;   
-            color: floralwhite;;    
-            font-size: 1rem;
-            font-weight: bold;
-            border: none;
-            box-shadow: 5px 4px 9px 1px lightgray;
-            padding-top: 2%;       
-
-        }
+     
+      
         /* li>.go-vote:after{
             content: 'vote';
         } */
@@ -155,23 +110,11 @@ include_once "./db.php";
         li>.type-info:hover{
             opacity: 0.5;
         }
-        li>button:hover{
-            opacity: 0.9;
-            /* background-color:white; */
-        }
+       
         li>input{
             margin-right: 5px;
         }
-        h3{
-            letter-spacing: 10px;
-            opacity: 0.6;
-            border-bottom: 1px solid #ccc;
-            width: 70%;
-            margin: 10px auto;
-            padding-bottom: 5px;
-            font-size: 2rem;
-           
-        }
+       
         hr{
             border: 0.3px solid #ccc;
             opacity: 0.4;
@@ -203,6 +146,9 @@ include_once "./db.php";
         #logoB{
             display: none;
         }
+        main{
+            height: auto;
+        }
 
         
           
@@ -217,7 +163,7 @@ include_once "./db.php";
     </div>
     <header>
     <a href="index.php">首頁</a>
-    <a href="index.php?do=result_list">結果</a>
+    <a href="index.php?do=res.list">結果</a>
     <?php
     if(!isset($_SESSION['login'])){
     ?>

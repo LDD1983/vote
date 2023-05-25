@@ -1,4 +1,4 @@
-<ul>
+<ul class="index-ul">
 <?php
     $sql = "select * from `topic` where `close_date` >= '".date("Y-m-d H:i:s")."'";
 
