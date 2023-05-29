@@ -24,7 +24,7 @@
 <body>
     <header>
         <a href="index.php">首頁</a>
-        <a href="logout.php">登出</a>
+        <a href="/api/logout_api.php">登出</a>
     </header>
     <nav>
         <a href="../backend.php">返回管理</a>

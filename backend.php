@@ -1,4 +1,15 @@
-<?php include_once "./db.php"; ?>
+<?php include_once "./db.php"; 
+$do="";
+if(isset($_GET['do'])){
+    $do=$_GET['do'];
+}else{
+    if(isset($_SESSION['pr'])){
+        $do=$_SESSION['pr'];
+    }else{
+        $do="error";
+    }
+}      
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,6 +23,10 @@
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/list.css">
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/form.css">
+   
+
+
     <style>
         .img{
             display: flex;
@@ -30,14 +45,36 @@
     </div>
     <header>
         <a href="index.php">首頁</a>
-        <a href="logout.php">登出</a>
+     
+        <a href="./api/logout_api.php">登出</a>
     </header>
-    <nav>
-        <a href="./back/add_vote.php">新增投票</a>
-        <a href="./back/que_vote.php">結果查詢</a>
-    </nav>
+    
     <main>
         <?php
+        switch($_SESSION['pr']){
+            case 'super';
+                echo '<nav>';
+                echo '<a href="/back/add_vote.php">新增投票</a>';
+                echo '<a href="/backend.php">管理首頁</a>';
+                echo '<a href="./backend.php?do=query_vote">結果查詢</a>';
+                echo '</nav>';
+            break;
+            case 'admin';
+                echo '<nav>';
+                echo '<a href="/back/add_vote.php">新增投票</a>';
+                echo '<a href="/backend.php">管理首頁</a>';
+                echo '<a href="./backend.php?do=query_vote">結果查詢</a>';
+                echo '</nav>';
+            break;
+
+            case 'member';
+            echo '<nav>';
+            echo '<a href="./backend.php?do=edit_selt">修改資料</a>';
+            echo '<a href="./backend.php?do=vote_history">投票紀錄</a>';
+            echo '</nav>';
+
+            break;
+        }
         //include "./back/topic_list.php";
 
         /*  if(isset($_GET['do'])){
@@ -47,7 +84,7 @@
         } */
 
         //$do=(isset($_GET['do']))?$_GET['do']:'topic_list';
-        $do = $_GET['do'] ?? 'topic_list';
+        
 
         $file = "./back/". $do.".php";
 

@@ -43,7 +43,7 @@ $options = $pdo->query("select * from `options` where `subject_id`='{$_GET['id']
     </div>
     <header>
         <a href="../index.php">首頁</a>
-        <a href="logout.php">登出</a>
+        <a href="/api/logout_api.php">登出</a>
     </header>
     <nav>
         <a href="../backend.php">返回管理</a>
@@ -71,6 +71,11 @@ $options = $pdo->query("select * from `options` where `subject_id`='{$_GET['id']
                 <label for="type">類型：</label>
                 <input type="radio" name="type" id="type1" value="1" <?= ($topic['type'] == 1) ? 'checked' : ''; ?>>單選&nbsp;
                 <input type="radio" name="type" id="type2" value="2" <?= ($topic['type'] == 2) ? 'checked' : ''; ?>>複選
+            </div>
+            <div class="login">
+                <label for="login">是否公開</label>
+                <input type="radio" name="login" id="login0" value="0" <?= ($topic['login'] == 0) ? 'checked' : ''; ?>>是 &nbsp;
+                <input type="radio" name="login" id="login1" value="1" <?= ($topic['login'] == 1) ? 'checked' : ''; ?>>否
             </div>
             <hr>
             <div class="options">

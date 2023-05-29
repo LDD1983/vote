@@ -10,6 +10,7 @@ include_once "../db.php";
 $sql = "update `topic` 
         set  `subject`='{$_POST['subject']}',
              `type`='{$_POST['type']}',
+             `login`='{$_POST['login']}',
              `open_date`='{$_POST['open_date']}',
              `close_date`='{$_POST['close_date']}'
         where `id`='{$_POST['subject_id']}'";

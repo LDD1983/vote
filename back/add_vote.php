@@ -33,17 +33,17 @@
     </div>
     <header>
         <a href="../index.php">首頁</a>
-        <a href="logout.php">登出</a>
+        <a href="../api/logout_api.php">登出</a>
     </header>
     <nav>
         <a href="../backend.php">返回管理</a>
-        <a href="./back/que_vote.php">結果查詢</a>
+        <a href="../backend.php?do=query_vote">結果查詢</a>
     </nav>
 
     <main>
 
-        <form action="../api/add_vote_api.php" method="post">
-            <h1>新增主題</h1>
+        <form action="../api/add_vote_api.php" method="post" enctype="multipart/form-data">
+            <h3>新增主題</h3>
             <div class="subj">
                 <label for="subject">主題說明：</label>
                 <input type="text" name="subject" id="subject">
@@ -67,6 +67,16 @@
                 <input type="radio" name="type" id="type1" value="1">單選&nbsp;
                 <input type="radio" name="type" id="type2" value="2">複選
             </div>
+            <div class="login">
+                <label for="login">是否公開</label>
+                <input type="radio" name="login" id="login0" value="0">是 &nbsp;
+                <input type="radio" name="login" id="login1" value="1" >否
+            </div>
+            <div class="file">
+                <label for="file"></label>
+                <input type="file" name="img" id="for_img" value=" ">
+              
+            </div>
             <hr>
             <div class="options">
                 <div>
@@ -78,7 +88,10 @@
             </div>
             <div class="subm">
                 <input type="submit" value="確定新增" onclick="confirm('確定新增?')">
-                <input type="reset" value="重設">
+                
+            </div>
+            <div class="reset">
+            <input type="reset" value="重設">
             </div>
         </form>
     </main>

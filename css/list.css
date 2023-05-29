@@ -125,22 +125,27 @@
   .index-li:nth-child(1)>.main-subject
   {
     animation-name: main-subject-1;
-    animation-duration: 1s;  
+    animation-duration: 1s;
+    width: 30.4rem;   
   }
   .index-li:nth-child(3)>.main-subject
   {
     animation-name: main-subject-2;
     animation-duration: 2s;  
+    width: 30.3rem; 
   }
   .index-li:nth-child(5)>.main-subject
   {
     animation-name: main-subject-3;
-    animation-duration: 3s;  
+    animation-duration: 3s; 
+    width: 30.2rem;  
+    
   }
   .index-li:nth-child(7)>.main-subject
   {
     animation-name: main-subject-4;
-    animation-duration: 4s;  
+    animation-duration: 4s; 
+    width: 30.1rem; 
   }
   .index-li:nth-child(9)>.main-subject
   {

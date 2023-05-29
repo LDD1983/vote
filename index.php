@@ -174,6 +174,18 @@ include_once "./db.php";
     ?>
         <a href="./api/logout_api.php">登出</a>
     <?php
+        switch($_SESSION['pr']){
+            case 'super';
+                echo '<a href="backend.php?do=super">超管</a>';
+
+            break;
+            case 'admin';
+                echo '<a href="backend.php?do=admin">網管</a>';
+            break;
+            default : 'member';
+                echo '<a href="backend.php?do=member">管理</a>';
+            break;
+        }
     }
     ?>
     
@@ -182,6 +194,10 @@ include_once "./db.php";
     <main>
 
 <?php
+if(isset($_SESSION['login']) && isset($_SESSION ['pr'])){
+    echo '<p>您的身分為 : ';
+    echo "";
+    echo $_SESSION['pr'];}
 
 $do=$_GET['do']??'list';
 

@@ -93,19 +93,19 @@ form .time {
     
 }
 h3{
-    letter-spacing: 10px;
+    letter-spacing: 8px;
     opacity: 1;
-    border-radius: 5px;
-    width: 60%;
-    height: 3rem;
-    margin: 20px auto;
+    border-radius: 10px;
+    width: 50%;
+    height: 5rem;
+    margin: 40px auto;
     padding-bottom: 5px;
-    font-size: 2rem;
+    font-size: 2.5rem;
     background-image: linear-gradient(to right , lightpink, #f5f4f4);
     background-repeat: no-repeat;
     /* margin-bottom: 10px; */
-    padding-top: 5px;
-    color: #fff4f4;
+    padding-top: 17px;
+    color: #947070;
     animation-name: h3Ani;
     animation-duration: 2.5s;  
     animation-fill-mode: forwards;
@@ -114,14 +114,15 @@ h3{
 @keyframes h3Ani {
     0% {background-size: 0% 100%;}
     90%{background-size: 100% 100%;box-shadow: 0px 0px 0px 0px lightgray;}
-    100% {box-shadow: 5px 3px 8px 1px lightgray;}
+    100% {box-shadow: 7px 4px 10px 2px lightgray;}
 }
 input[type="submit"] {
     width: 250px;
+    height: 2rem;
     color: brown;
     background-color: lightpink;
-    opacity: 0.8;
-    margin-top: 10px;
+    opacity: 0.7;
+    margin-top: 20px;
 }
 input[type="submit"]:hover{
     opacity: 1;
@@ -141,3 +142,4 @@ li.vote-option-title,
     width: 60%;
     margin: 0 auto;
 }
+
