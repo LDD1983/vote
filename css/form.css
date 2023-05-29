@@ -132,14 +132,5 @@ input[type="submit"]:hover{
     left: -5px;
 }
 
-.vote-option{
-    background-image:linear-gradient(to right ,white,#f5f4f4, #ffeded, #f5f4f4,white);
-    background-repeat: no-repeat;
-   
-}
-li.vote-option-title,
-.vote-option {
-    width: 60%;
-    margin: 0 auto;
-}
+
 

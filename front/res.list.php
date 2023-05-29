@@ -11,11 +11,7 @@ $subjects=$pdo->query("select `topic`.`id`,
 
 <ul class="vote-result">
 <h3>選擇你想看的投票主題</h3>
-    <li class="vote-option-title">
-        <div class="vote-item">序號</div>
-        <div class="vote-item">主題</div>
-        <div class="vote-item">票數</div>
-    </li>
+
     
     <?php 
     foreach($subjects as $idx => $subject){

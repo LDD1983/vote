@@ -35,13 +35,6 @@ include_once "./db.php";
         .desc-ul>li{
             margin-bottom: 5px;
         }
-        ul>.vote-option-title{
-            font-size: 1.5rem;
-            letter-spacing: 3px;
-            opacity: 0.6;
-            margin-top: 5px;
-            text-align:center;
-        }
         .vote-item{
             display: inline-block;
             margin-bottom: 5px;

@@ -94,6 +94,9 @@
     color:darkgreen;
   
 }
+
+
+/* ///////              .main-subject             ////////////////////////////////// */
 .index-li>.main-subject{
     font-size: 1.3rem;
     letter-spacing: 3px;
@@ -153,15 +156,6 @@
     animation-duration: 5s;  
   }
 
-
-
-
-
-
-
- 
-
-  
 @keyframes main-subject-1 {
     0% {background-size: 0% 100%;}
     90%{background-size: 100% 100%;box-shadow: 0px 0px 0px 0px lightgray;}
@@ -225,7 +219,7 @@ li>.go-vote:active{
 
 }
 
-
+/* .vip .normal */
 .vip-login,
 .normal{
     position: absolute;
@@ -271,5 +265,15 @@ li>.go-vote:active{
  
 }
 
+
+.vote-option{`
+    background-image:linear-gradient(to right ,white,#f5f4f4, #ffeded, #f5f4f4,white);
+    background-repeat: no-repeat;
+    width: 60%;
+    margin: 0 auto;
+    height: 2.5rem;
+    padding-top: 0.3rem;
+   
+}
 
            
