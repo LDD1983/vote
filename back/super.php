@@ -1,20 +1,4 @@
-<style>
-    main{
-        text-align: center;
-    }
-    
-    table{
-        border: 1px solid #000;
-        border-collapse: collapse;
-        width: 50%;
-        margin: 10px auto;
-        text-align: center;
-    }
-    td{
-        border: 1px solid #000;
-      }
 
-</style>
 
 <h3>管理權限</h3>
 <?php
@@ -23,7 +7,7 @@ $mems = $pdo->query($sql)->fetchAll();
 
 
 ?>
-<table>
+<table class="super">
     <tr>
     <td>帳號</td>
     <td>身分</td>

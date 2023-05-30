@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>刪除主題</title>
-    <link rel="stylesheet" href="../css/basic.css">
+   
     <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/center.css">
+    <link rel="stylesheet" href="../css/list.css">
+    <link rel="stylesheet" href="../css/form.css">  
     <link rel="stylesheet" href="../css/reset.css">
     <style>
         li {

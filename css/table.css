@@ -1,0 +1,17 @@
+main{
+    display:block;
+}
+
+.super{
+    border: 1px solid #000;
+    border-collapse: collapse;
+    width: 50%;
+    margin: 10px auto;
+    text-align: center;
+}
+.super td{
+    border: 1px solid #000;
+  }
+.super select{
+    border: none;
+}

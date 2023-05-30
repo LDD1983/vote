@@ -101,7 +101,7 @@
     font-size: 1.3rem;
     letter-spacing: 3px;
     width: 30rem;
-    height: 2rem;
+    height: 3rem;
     /* opacity: 0.7; */
     position: relative;
     text-align: left;
@@ -118,11 +118,12 @@
    
     padding-top: 0.3rem;
     color: revert;
-    font-weight: lighter;
+    font-weight: 500;
     animation-name: main-subject;
     animation-duration: 6s;  
     animation-fill-mode: forwards;
     /* box-shadow: 5px 4px 9px 1px lightgray; */
+    text-shadow: 0 0 lightcoral;
     
   }
   .index-li:nth-child(1)>.main-subject
@@ -187,6 +188,8 @@
     100% {box-shadow: 5px 3px 8px 1px lightgray;}
 }
 
+
+/* //////////  .go-vote //////////////////////////////////////////////// */
 li>.go-vote{
     position: absolute;
     bottom: -3px;
@@ -194,8 +197,7 @@ li>.go-vote{
     left: 70%;
     width: 80px;
     /* rotate: 3deg; */
-    text-transform: uppercase;
-    
+    text-transform: uppercase;    
     background-image: linear-gradient(to bottom right,  #da9be5, lightpink);
     color: floralwhite;
     font-size: 1rem;
@@ -204,6 +206,8 @@ li>.go-vote{
     padding-top: 2%;
     border: 1px solid #cbcbcb;
     opacity: 0.8;
+    animation-name:go-vote;
+    animation-duration: 3s;
 }
 li>.go-vote:hover{
     opacity: 1;
@@ -218,12 +222,16 @@ li>.go-vote:active{
     background-image: none;
 
 }
+@keyframes go-vote{ 
+    0%{opacity: 0;}    
+    60%{opacity: 0;}          
+    70%{opacity: 0.8;}
+}
 
-/* .vip .normal */
+/* ////////////.vip .normal ////////////////////////*/
 .vip-login,
 .normal{
     position: absolute;
-
     width: 73px;
     bottom: 0px;
     height: 30px;
@@ -241,8 +249,7 @@ li>.go-vote:active{
         }
 .index-li>.vip-login{
     /* color: white;
-    box-shadow: 3px 3px 20px 6px #ccc; */
-    
+    box-shadow: 3px 3px 20px 6px #ccc; */    
     /* background-color: silver;
     border: 1px solid whitesmoke; */
     background-image: linear-gradient(to right, #fdf3f5, #4ef5ed);
@@ -256,24 +263,32 @@ li>.go-vote:active{
 .vip-login,
 .normal{
     border-radius: 30px;
-    width: 50px;
-   
-  
+    width: 50px;  
     height: 25px;
     font-size: 0.8rem;
     background-color: #fff;
  
 }
+.index-li>.type-info{
+    bottom: 0.8rem;
+}
 
 
-.vote-option{`
+.vote-option,
+.vote-option-title{
     background-image:linear-gradient(to right ,white,#f5f4f4, #ffeded, #f5f4f4,white);
     background-repeat: no-repeat;
     width: 60%;
     margin: 0 auto;
     height: 2.5rem;
     padding-top: 0.3rem;
+    text-shadow: 1px 1px #CCC;
    
+}
+li.vote-option-title {
+    font-size: 1.2rem;
+    letter-spacing: 6px;
+
 }
 
            

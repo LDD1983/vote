@@ -19,11 +19,12 @@ if(isset($_GET['do'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>管理後台</title>
-    <link rel="stylesheet" href="./css/basic.css">
+   
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/list.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/form.css">
+    <link rel="stylesheet" href="./css/table.css">
    
 
 

@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>新增主題</title>
-    <link rel="stylesheet" href="../css/basic.css">
-    <link rel="stylesheet" href="../css/center.css">
+   
+   
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/form.css">
@@ -72,11 +72,10 @@
                 <input type="radio" name="login" id="login0" value="0">是 &nbsp;
                 <input type="radio" name="login" id="login1" value="1" >否
             </div>
-            <div class="file">
-                <label for="file"></label>
-                <input type="file" name="img" id="for_img" value=" ">
-              
-            </div>
+            <label for="file-upload" class="custom-file-upload">
+            <i class="fa fa-cloud-upload"></i> 上傳圖片
+            </label>
+            <input id="file-upload" type="file"/>
             <hr>
             <div class="options">
                 <div>

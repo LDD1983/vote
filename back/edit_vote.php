@@ -15,11 +15,11 @@ $options = $pdo->query("select * from `options` where `subject_id`='{$_GET['id']
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>編輯主題</title>
-    <link rel="stylesheet" href="../css/basic.css">
-    <link rel="stylesheet" href="../css/center.css">
+   
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/form.css">
+    <link rel="stylesheet" href="../css/list.css">
     <script src="../Js/jquery-3.7.0.min.js"></script>
     <style>
         .img{

@@ -1,14 +1,13 @@
-<?php
 
-if(isset($_GET['error'])){
-    echo "<span style='color:red'>";
-    echo "帳號密碼不可為空";
-    echo "</span>";
-}
-
-?>
-<form action="./api/reg_api.php" method="post">
+<form action="./api/reg_api.php" method="post" class="reg">
     <h3>會員註冊</h3>
+    <?php
+    if(isset($_GET['error'])){
+        echo "<span style='color:red'>";
+        echo "帳號密碼不可為空";
+        echo "</span>";
+    }
+    ?>
     <div>
         <label for="acc">帳 號 : </label>
         <input type="text" name="acc" id="acc">

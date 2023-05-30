@@ -1,7 +1,7 @@
 
 
 
-<form action="../api/login_api.php" method="post">
+<form action="../api/login_api.php" method="post" class="login-form">
 <h3>會員登入</h3>
 <?php
     if(isset($_GET['error'])){

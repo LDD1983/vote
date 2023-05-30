@@ -1,4 +1,18 @@
-form{
+main {
+ 
+    justify-content: center;
+    /* align-items: center; */
+    height: auto;
+    text-align: center;
+}
+
+form {
+    text-align: center;
+
+}
+
+
+form {
     width: 100%;
 }
 
@@ -6,18 +20,21 @@ form>div {
     margin-bottom: 10px;
     margin-top: 10px;
 }
+
 /* .options>div {
     margin-bottom: 5px;
 } */
-form .options span{
+form .options span {
     font-size: 1.5rem;
     color: #7e7b7b;
 }
-form hr{
+
+form hr {
     width: 50%;
 }
-form h1{
-    background-image: linear-gradient(to right , #f5f4f4, lightpink, #f5f4f4);
+
+form h1 {
+    background-image: linear-gradient(to right, #f5f4f4, lightpink, #f5f4f4);
     color: white;
     font-size: 1.4rem;
     width: 60%;
@@ -28,11 +45,13 @@ form h1{
     font-weight: 200;
     border-radius: 5px;
 }
-form input{
-    border: 1px solid #ccc;
+
+form input {
+    border: 1px solid #d5a8a8;
     border-radius: 5px;
     line-height: normal;
 }
+
 /* label{
     width: 500px;
 } */
@@ -41,58 +60,68 @@ form input{
 form .time {
     margin-bottom: 10px;
 }
+
 .subj,
 .type,
 #option {
     text-align: center;
 }
+
 #subject,
 #open_date,
 #close_date {
     width: 200px;
 }
+
 .subm {
     text-align: center;
     margin-top: 10px;
     border-radius: 10px;
 }
-.f-inB{
+
+.f-inB {
     height: 90px;
     margin: 0 auto;
     /* border: 1px solid #ccc; */
     position: relative;
 }
-.go-vote-out{
+
+.go-vote-out {
     height: 50px;
     width: 50px;
     border-radius: 50%;
 }
-.go-vote-out:hover{
+
+.go-vote-out:hover {
     background-color: #fff;
     font-weight: 900;
 
 }
-.vote div>.go-vote-in{
+
+.vote div>.go-vote-in {
     position: absolute;
-    right: 47.4%;  
+    right: 47.4%;
     width: 100px;
-    
+
     bottom: 5px;
     height: 50px;
-  
+
     opacity: 0.5;
     border: 1px solid black;
     background-color: white;
-    
-   
+
+
     background-image: url(/img/vote_ticket.png);
-    }
-.go-vote-in:hover{
+}
+
+.go-vote-in:hover {
     rotate: 2deg;
     opacity: 0.65;
-    
+
 }
-h3{
+
+/* h3 */
+h3 {
     letter-spacing: 8px;
     opacity: 1;
     border-radius: 10px;
@@ -101,21 +130,33 @@ h3{
     margin: 40px auto;
     padding-bottom: 5px;
     font-size: 2.5rem;
-    background-image: linear-gradient(to right , lightpink, #f5f4f4);
+    background-image: linear-gradient(to right, lightpink, #f5f4f4);
     background-repeat: no-repeat;
     /* margin-bottom: 10px; */
     padding-top: 17px;
     color: #947070;
     animation-name: h3Ani;
-    animation-duration: 2.5s;  
+    animation-duration: 2.5s;
     animation-fill-mode: forwards;
-   
+    margin-bottom: 3rem;
+    text-shadow: 2px 2px #dc718a5e;
+
 }
 @keyframes h3Ani {
-    0% {background-size: 0% 100%;}
-    90%{background-size: 100% 100%;box-shadow: 0px 0px 0px 0px lightgray;}
-    100% {box-shadow: 7px 4px 10px 2px lightgray;}
+    0% {
+        background-size: 0% 100%;
+    }
+
+    90% {
+        background-size: 100% 100%;
+        box-shadow: 0px 0px 0px 0px lightgray;
+    }
+
+    100% {
+        box-shadow: 7px 4px 10px 2px lightgray;
+    }
 }
+
 input[type="submit"] {
     width: 250px;
     height: 2rem;
@@ -124,13 +165,65 @@ input[type="submit"] {
     opacity: 0.7;
     margin-top: 20px;
 }
-input[type="submit"]:hover{
+
+input[type="submit"]:hover {
     opacity: 1;
 }
+
 .email {
     position: relative;
     left: -5px;
 }
 
+/* input:file */
+input[type="file"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
 
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 1px 12px;
+    cursor: pointer;
+    width: 16rem;
+    border-radius: 8px;
+    height: 1.5rem;
+    letter-spacing: 0.3rem;
+    opacity: 0.8;
+}
+.custom-file-upload:hover{
+    background-color:#e7e7e7;  
+    opacity: 1;
+    
 
+}
+
+.reg label{
+    color: #c14747;
+    text-shadow: 1px 1px #f5f4f4;
+}
+.login-form label{
+    color: #c14747;
+    text-shadow: 1px 1px #f5f4f4;
+}
+form input[type="text"]:focus-visible {
+    outline: 1px solid #ffc1c1;
+    border-radius: 5px;
+    
+}
+form input[type="password"]:focus-visible {
+    outline: 1px solid #ffc1c1;
+    border-radius: 5px;
+}
+
+form input:-internal-autofill-selected{ 
+   
+    background-color: -internal- lightpink;
+}

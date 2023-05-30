@@ -22,5 +22,5 @@ if(!empty($_POST) && $_POST['acc']!="" && $_POST['pw']!=""){
     $pdo->exec($sql);
     header("location:../index.php");
 }else {
-    header("location:../index?reg&error=1");
+    header("location:../index.php?do=reg&error=1");
 }
