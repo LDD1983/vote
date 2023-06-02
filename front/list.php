@@ -3,7 +3,11 @@
     $sql = "select * from `topic` where `close_date` >= '".date("Y-m-d H:i:s")."'";
 
 
-    $rows = $pdo->query($sql)->fetchAll();
+    // $rows = $pdo->query($sql)->fetchAll();
+
+    //////////////////////  function q
+
+   $rows = q($sql);
     // echo "<pre>";
     // print_r($rows);
     // echo "</pre>";

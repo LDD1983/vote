@@ -72,10 +72,10 @@
                 <input type="radio" name="login" id="login0" value="0">是 &nbsp;
                 <input type="radio" name="login" id="login1" value="1" >否
             </div>
-            <label for="file-upload" class="custom-file-upload">
+            <label for="img" class="custom-file-upload">
             <i class="fa fa-cloud-upload"></i> 上傳圖片
             </label>
-            <input id="file-upload" type="file"/>
+            <input id="img" type="file" name="img" />
             <hr>
             <div class="options">
                 <div>

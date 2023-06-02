@@ -1,21 +1,25 @@
 <?php
 
-$topic=$pdo->query("select * from `topic` where `id`='{$_GET['id']}'")->fetch(PDO::FETCH_ASSOC);
+// $topic=$pdo->query("select * from `topic` where `id`='{$_GET['id']}'")->fetch(PDO::FETCH_ASSOC);
+$topic = find('topic',$_GET['id']);
+
 if($topic['login']==1){
     if(!isset($_SESSION['login'])){
         $_SESSION['position']="/index.php?do=vote&id={$_GET['id']}";
-        header("location:index.php?do=login&msg=1");
+        to("index.php?do=login&msg=1");
     }
 }
 
-$options=$pdo->query("select * from `options` where `subject_id`='{$_GET['id']}'")->fetchAll(PDO::FETCH_ASSOC);
+// $options=$pdo->query("select * from `options` where `subject_id`='{$_GET['id']}'")
+//               ->fetchAll(PDO::FETCH_ASSOC);
+$options=all('options',['subject_id'=>$_GET['id']])
 ?>
     
 <form action="./api/vote_api.php" method="post" class="vote">
     <h3><?= $topic['subject']; ?></h3>
     <?php
     if(!empty($topic['image'])){
-        echo "<img src='./upload/{$topic['image']}' style='width:50px;height:50px'>";
+        echo "<img src='./upload/{$topic['image']}' style='width:300px;height:300px'>";
     }
 ?>
 
