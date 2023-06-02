@@ -38,6 +38,7 @@ echo "</pre>"; */
 
 ///////////////////////////////////////////////////////////////////
 
+// /////////   function all 
 // all($table) all 
 // like : select * from `topic`
 
@@ -52,8 +53,6 @@ echo "</pre>"; */
 // all($table,$array,$sql)  match complex condiitons
 // : select * from `topic` where `type` = 1 && `login`=1 order by `id` desc; 
 // all()
-
-
 
 function all($table,...$arg){
    
@@ -83,7 +82,7 @@ function all($table,...$arg){
     return $rows;
 }
 
-////////////////////////// for count
+////////////////////////// for count 
 function _count($table,...$arg){
    
     $pdo=pdo();
@@ -161,7 +160,7 @@ function find($table,$arg){
         
     }
 
-    echo $sql;
+    // echo $sql;
 
     $row=$pdo->query($sql)->fetch(PDO::FETCH_ASSOC);
 
@@ -197,11 +196,11 @@ function insert($table,$cols){
     $pdo = pdo();
     $col=array_keys($cols);
 
-/*     $sql ="insert into $table (`";
-    $sql .=join("`,`", $col);
-    $sql .="`) values('";
-    $sql .=join("','",$cols);
-    $sql .="')"; */
+    /*     $sql ="insert into $table (`";
+           $sql .=join("`,`", $col);
+           $sql .="`) values('";
+           $sql .=join("','",$cols);
+           $sql .="')"; */
 
     $sql="insert into $table (`" . join("`,`", $col) . "`) values('".join("','",$cols)."')";
     //echo $sql;
@@ -256,7 +255,7 @@ function dd($array){
 }
 
 function to($url){
-    return header("location".$url);
+    header("location:".$url);
 }
 
 ?>

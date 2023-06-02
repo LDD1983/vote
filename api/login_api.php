@@ -14,9 +14,10 @@ $chk =_count('members',['acc'=>$_POST['acc'],'pw'=>$_POST['pw']]);
 // $_SESSION['login'] = ['acc'];
 
 if ($chk) {
-    $sql_pr="select `pr` from `members` where `acc`='{$_POST['acc']}' && `pw`='{$_POST['pw']}'";
+    // $sql_pr="select `pr` from `members` where `acc`='{$_POST['acc']}' && `pw`='{$_POST['pw']}'";
     
-    $pr=$pdo->query($sql_pr)->fetchColumn();
+    // $pr=$pdo->query($sql_pr)->fetchColumn();
+    $pr = find('members',['acc'=>$_POST['acc'],'pw'=>$_POST['pw']])['pr'];
 
     $_SESSION['login']=$_POST['acc'];
     
@@ -30,7 +31,7 @@ if ($chk) {
         exit();
     }
 
-    header("location:../index.php");
+    to("../index.php");
 }else{
-    header("location:../index.php?do=login&error=1");
+    to("../index.php?do=login&error=1");
 }

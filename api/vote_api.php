@@ -42,5 +42,5 @@ if(isset($_SESSION['login'])){
     $pdo->exec($sql);
 
 
-
-header("location:../index.php?do=res.list&id=$subject_id");
+//  to(header("location:"))
+to("../index.php?do=res.list&id=$subject_id");

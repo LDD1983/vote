@@ -1,9 +1,14 @@
 <?php include_once "../db.php";
-$topic = $pdo->query("select * from `topic` where `id`='{$_GET['id']}'")
-    ->fetch(PDO::FETCH_ASSOC);
+// $topic = $pdo->query("select * from `topic` where `id`='{$_GET['id']}'")
+//     ->fetch(PDO::FETCH_ASSOC);
+$topic = find('topic',['id'=>$_GET['id']]);
 
-$options = $pdo->query("select * from `options` where `subject_id`='{$_GET['id']}'")
-    ->fetchAll(PDO::FETCH_ASSOC);
+// $options = $pdo->query("select * from `options` where `subject_id`='{$_GET['id']}'")
+//     ->fetchAll(PDO::FETCH_ASSOC);
+$options= all('options',['subject_id'=>$_GET['id']]);
+
+// dd($topic);
+// dd($options);
 
 ?>
 
@@ -80,6 +85,7 @@ $options = $pdo->query("select * from `options` where `subject_id`='{$_GET['id']
             <hr>
             <div class="options">
                 <?php
+               
                 foreach ($options as $opt) {
                 ?>
                     <div>
@@ -101,6 +107,7 @@ $options = $pdo->query("select * from `options` where `subject_id`='{$_GET['id']
         </form>
     </main>
 
+    
 
 
 
