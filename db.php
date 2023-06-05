@@ -1,6 +1,8 @@
 <?php
-$dsn="mysql:host=localhost;charset=utf8;dbname=vote";
+// $dsn="mysql:host=localhost;charset=utf8;dbname=vote";
+$dsn="mysql:host=localhost;charset=utf8;dbname=s1120213";
 $pdo=new PDO($dsn, 'root', '');
+$pdo=new PDO($dsn, 's1122013', 's1122013');
 
 date_default_timezone_set("Asia/Taipei");
 
